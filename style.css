@@ -84,7 +84,7 @@ body {
 
 #splash {
   height: 370px;
-  background-image: url('colorado.jpg');
+  background-image: url('/img/colorado.jpg');
 }
 
 #about {
