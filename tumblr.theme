@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>{Title}</title>
+<link rel='icon' href='{Favicon}' />
+<link rel='shortcut icon' href='{Favicon}' />
+<link rel='alternate' type='application/rss+xml' href='{RSS}' />
+<meta name='description' content='{MetaDescription}' />
+<meta name='color:Link' content='#6699cc' />
+<style type='text/css'>
+    ::selection{
+        background:#FFFFC0;
+        color:#424242;
+    }
+    ::-moz-selection{
+        background:#FFFFC0;
+        color:#424242;
+    }
+    * {
+        outline:none;
+    }
+    body {
+        background-color:#fff;
+        font:0.8em Helvetica;
+        line-height:140%;
+        color:#424242;
+        margin:0 0 15px 0;
+    }
+    .container {
+      width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .border {
+      height: 18px;
+      width: 100%;
+      background-image: url('http://www.plaidsoftware.com/img/plaid.jpg');
+      border-top: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+    }
+    #header {
+      height: 96px;
+      background: #252C35;
+    }
+
+    #logo {
+      /* image width is 357px */
+      margin: 19px 0px 0px 0px;
+    }
+
+    #nav {
+      width: 580px;
+      height: 96px;
+      float: right;
+      position: relative;
+    }
+
+    #nav ul {
+      list-style-type: none;
+      position: absolute;
+      right: 15px;
+      top: 45px;
+    }
+
+    #nav li {
+      display: inline;
+      font-size: 14pt;
+      color: #fff;
+      float: left;
+      border-left: 2px solid #fff;
+      margin-left: 20px;
+      padding-left: 20px;
+    }
+
+    #nav li.first {
+      border-left: none;
+      margin-left: 0px;
+      padding-left: 0px;
+    }
+
+    #nav li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    a img {
+        border:none;
+    }
+    a {
+        text-decoration:none;
+        color:{color:Link};
+    }
+    a:hover {
+        color:#424242;
+    }
+    h1 {
+        margin:0;
+        padding:0 0 10px 0;
+        font-size:2em;
+    }
+    h3 {
+        margin:0 0 8px 0;
+        padding:0;
+        font-size:1.1em;
+    }
+    p {
+        margin:10px 0;
+        padding:0;
+    }
+    #wrapper {
+        width:632px;
+        margin:0 auto;
+    }
+    .postInfo {
+        width:100px;
+        float:left;
+        padding:8px 0;
+    }
+    .postInfo a,
+    .postInfo a:hover {
+        color:#424242;
+    }
+    .postInfo span,
+    .postInfo span a,
+    .postInfo span a:hover {
+        color:#cecece;
+    }
+    .postWrapper {
+        width:522px;
+        float:left;
+        margin:0 0 15px 0;
+        border:5px solid #f8f8f8;
+    }
+    .postContainer {
+        border:1px solid #d7d7d7;
+    }
+    .post {
+        padding:10px 10px 0 10px;
+    }
+    .postNote {
+        padding:10px;
+    }
+    .insideInfo {
+        background:#f8f8f8;
+        border-top:1px solid #eee;
+        padding:5px 10px;
+        font-size:0.8em;
+        color:#888;
+    }
+    .insideInfo .postTags {
+        width:350px;
+        float:left;
+    }
+    .insideInfo .postTags a {
+        color:#aaa;
+    }
+    .insideInfo .postNotes {
+        width:150px;
+        float:left;
+        text-align:right;
+    }
+    p.quote {
+        font-size:1.3em;
+        margin:0 0 10px 0;
+        border-left:4px solid #d7d7d7;
+        padding:0 0 0 6px;
+    }
+    .chat {
+        margin:0 0 10px 0;
+    }
+    .chat td {
+        padding:5px 8px;
+    }
+    .chat td.label {
+        text-align:right;
+        font-weight:bold;
+    }
+    .chat tr.odd td {
+        background:#f8f8f8;
+        border-bottom:1px solid #eee;
+    }
+    .chat tr.even td {
+        background:#fff;
+    }
+    .audio {
+        width:350px;
+        border:1px solid #eee;
+        border-radius:5px;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        background:#f8f8f8;
+    }
+    .audioLeft {
+        width:210px;
+        float:left;
+        margin:5px;
+        padding:5px;
+        border:1px solid #eee;
+        border-radius:5px;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        background:#fff;
+    }
+    .audioRight {
+        width:110px;
+        float:left;
+        text-align:center;
+        padding:13px 0;
+        font-size:1.2em;
+    }
+    .footer {
+        color:#cecece;
+        padding:0 0 0 116px;
+        font-size:0.8em;
+        font-weight:bold;
+    }
+    .clear {
+        clear:both;
+    }
+    ol.notes,
+    ol.notes li {
+        padding:0;
+        margin:0;
+        list-style-type:none;
+    }
+    ol.notes li.note {
+        padding:2px 0;
+        font-size:0.8em;
+    }
+    ol.notes li.note img.avatar {
+        vertical-align:-8px;
+        margin-right:5px;
+        width:16px;
+        height:16px;
+        padding:2px;
+        border:1px solid #d7d7d7;
+    }
+    ol.notes li.note blockquote a {
+        text-decoration:none;
+    }
+    {CustomCSS}
+    .credits {
+        float:right;
+        text-align:right;
+        padding:0 16px 0 0;
+        font-weight:normal;
+    }
+</style>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <a href="http://www.plaidsoftware.com"><img id="logo" src="http://www.plaidsoftware.com/img/logo.png"/></a>
+      <div id="nav">
+        <ul>
+          <li class="first"><a href="http://blog.plaidsoftware.com">Our weblog</a></li>
+          <li><a href="http://www.plaidsoftware.com/contact">Get plaid</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="border">&nbsp;</div>
+
+<div id='wrapper'>
+    <div id='posts'>
+        {block:Posts}
+            <div class='postInfo'>
+                <a href='{Permalink}'>
+                    {ShortMonth} {DayOfMonth} {Year}
+                    <br />
+                    <span>{12Hour}:{Minutes} {AmPm}</span>
+                </a>
+            </div>
+            <div class='postWrapper'>
+                <div class='postContainer'>
+                    <div class='post'>
+                        {block:Text}
+                            {block:Title}
+                                <h3>{Title}</h3>
+                            {/block:Title}
+                            {Body}
+                        {/block:Text}
+                        {block:Photo}
+                            {LinkOpenTag}<img src='{PhotoURL-500}' alt='{PhotoAlt}'/>{LinkCloseTag}
+                            {block:Caption}
+                                <p>{Caption}</p>
+                            {/block:Caption}
+                        {/block:Photo}
+                        {block:Photoset}
+                            {Photoset-500}
+                            {block:Caption}
+                                <p>{Caption}</p>
+                            {/block:Caption}
+                        {/block:Photoset}
+                        {block:Quote}
+                            <p class='quote'>"{Quote}"</p>
+                            {block:Source}
+                                <p>{Source}</p>
+                            {/block:Source}
+                        {/block:Quote}
+                        {block:Link}
+                            <a href='{URL}' class='link' {Target}>{Name}</a>
+                            {block:Description}
+                                <p>{Description}</p>
+                            {/block:Description}
+                        {/block:Link}
+                        {block:Chat}
+                            {block:Title}
+                                <h3>{Title}</h3>
+                            {/block:Title}
+                            <table cellpadding='0' cellspacing='0' width='100%' border='0' class='chat'>
+                                {block:Lines}
+                                    <tr class='{Alt}'>
+                                        {block:Label}
+                                            <td class='label'>{Label}</td>
+                                        {/block:Label}
+                                        <td>{Line}</td>
+                                    </tr>
+                                {/block:Lines}
+                            </table>
+                        {/block:Chat}
+                        {block:Audio}
+                            <div class='audio'>
+                                <div class='audioLeft'>
+                                    {AudioPlayerWhite}
+                                </div>
+                                <div class='audioRight'>
+                                    {FormattedPlayCount} Plays
+                                </div>
+                                <br class='clear' />
+                            </div>
+                            {block:Caption}
+                                <p>{Caption}</p>
+                            {/block:Caption}
+                        {/block:Audio}
+                        {block:Video}
+                            {Video-500}
+                            {block:Caption}
+                                <p>{Caption}</p>
+                            {/block:Caption}
+                        {/block:Video}
+                    </div>
+                    <div class='insideInfo'>
+                        <div class='postTags'>
+                            Posted {TimeAgo}
+                            {block:HasTags}
+                                <br />
+                                {block:Tags}
+                                    <a href='{TagURL}'>#{Tag}</a>
+                                {/block:Tags}
+                            {/block:HasTags}
+                        </div>
+                        <div class='postNotes'>
+                            {NoteCountWithLabel}
+                        </div>
+                        <br class='clear' />
+                    </div>
+                </div>
+            </div>
+            {block:PostNotes}
+                <div class='postInfo'>&nbsp;</div>
+                <div class='postWrapper'>
+                    <div class='postContainer'>
+                        <div class='postNote'>
+                            {block:Posts}
+                                {PostNotes}
+                            {/block:Posts}
+                        </div>
+                    </div>
+                </div>
+            {/block:PostNotes}
+        {/block:Posts}
+        <div class='footer'>
+            <div class='credits'>
+                <a href='{RSS}'>{lang:RSS}</a> | <a href='/archive'>{lang:Archive}</a>
+            </div>
+            {block:NextPage}
+                <a href='{NextPage}'>&#171; {lang:Older}</a>
+            {/block:NextPage}
+            {block:PreviousPage}
+                {block:NextPage}
+                    |
+                {block:NextPage}
+            {/block:PreviousPage}
+            {block:PreviousPage}
+                <a href='{PreviousPage}'>{lang:Newer} &#187;</a>
+            {/block:PreviousPage}
+        </div>
+    </div>
+</div>
+<br class='clear' />
+</body>
+</html>
