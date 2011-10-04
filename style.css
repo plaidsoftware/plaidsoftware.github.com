@@ -9,6 +9,10 @@ body {
   color: #192249;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   width: 960px;
   margin-left: auto;
@@ -79,7 +83,6 @@ body {
 
 #nav li a {
   color: #fff;
-  text-decoration: none;
 }
 
 #splash {
@@ -176,7 +179,6 @@ body {
 
 #get a {
   color: #192249;
-  text-decoration: none;
 }
 
 #get a.visited {
@@ -195,10 +197,6 @@ body {
 
 #contact #info p {
   margin: 5px 0px;
-}
-
-#contact #info a {
-  text-decoration: none;
 }
 
 #contact #map {
