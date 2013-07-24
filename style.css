@@ -28,7 +28,7 @@ img {
   clear: both;
   height: 18px;
   width: 100%;
-  background-image: url('http://plaidsoftware.com/img/plaid.jpg');
+  background-image: url('http://www.plaidsoftware.com/img/plaid.jpg');
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
 }
@@ -93,7 +93,7 @@ img {
 
 #splash {
   height: 370px;
-  background-image: url('http://plaidsoftware.com/img/colorado.jpg');
+  background-image: url('http://www.plaidsoftware.com/img/colorado.jpg');
 }
 
 #about {
@@ -169,7 +169,7 @@ img {
   height: 60px;
   background: #fff;
   padding: 20px;
-  background-image: url('http://plaidsoftware.com/img/plaid.jpg');
+  background-image: url('http://www.plaidsoftware.com/img/plaid.jpg');
 }
 
 #get {
